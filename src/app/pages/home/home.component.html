@@ -1,7 +1,62 @@
 <div class="container-fluid text-center">
-    <div class="container" >
+    <div class="container">
         <figure class="figure" style="width: 100%;">
-            <img [src]="epics[0].imagen" class="figure-img img-fluid rounded" alt="Juego de la Semana">
+            <img [src]="oficinas[0].imagen" class="figure-img img-fluid rounded" alt="Juego de la Semana">
         </figure>
     </div>
-    </div>
+</div>
+<h1>Ofertas</h1>
+
+<div class="container">
+    <div id="carouselExampleRide1" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div *ngFor="let epic of epics" [class]="epic.id == 1 ? 'carousel-item active' : 'carousel-item'">
+            <img [src]="epic.imagen" class="d-block w-100" [alt]="epic.nombre">
+            <h5 *ngIf="epic.precio > 90; else elseTemplate">Producto mas caro</h5>
+            <ng-template #elseTemplate><h5>Producto más comprado</h5></ng-template>
+            <span [ngSwitch]="epic.tipo">
+              <div *ngSwitchCase="1">Acción</div>
+              <div *ngSwitchCase="2">Aventura</div>
+              <div *ngSwitchCase="3">Competitivo</div>
+              <div *ngSwitchDefault>Es desconocido</div>
+            </span>
+          </div>   
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>     
+</div>
+
+<div class="container">
+    <div id="carouselExampleRide2" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div *ngFor="let producto of productos" [class]="producto.id == 1 ? 'carousel-item active' : 'carousel-item'">
+            <img [src]="producto.imagen" class="d-block w-100" [alt]="producto.nombre">
+            <h5 *ngIf="producto.precio > 200; else elseTemplate">El producto más caro</h5>
+            <ng-template #elseTemplate><h5>Juego Gratis</h5></ng-template>
+            <span [ngSwitch]="producto.tipo">
+              <div *ngSwitchCase="1">Competitivo</div>
+              <div *ngSwitchCase="2">Competitivo</div>
+              <div *ngSwitchCase="3">Competitivo</div>
+              <div *ngSwitchDefault>Es desconocido</div>
+            </span>
+          </div>   
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>     
+</div>
+<button type="button" class="btn btn-primary" (click)="onClickButton()">Ir a Productos</button>
+

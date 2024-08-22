@@ -1,0 +1,118 @@
+/* General Styling */
+body {
+    background-color: #f8f9fa; /* Color de fondo más claro para un diseño moderno */
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Carrusel General */
+.carousel {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+/* Imágenes del Carrusel */
+.carousel-inner img {
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* Controles del Carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los controles */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Texto del Carrusel */
+h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.ng-template h5 {
+    color: #007bff;
+}
+
+.ng-template h5:hover {
+    color: #0056b3;
+}
+
+/* Tipos de Producto */
+span div {
+    font-style: normal;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Imagen Principal */
+.figure-img {
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Figure Container */
+figure {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* Contenedores */
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    padding-bottom: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 7%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
