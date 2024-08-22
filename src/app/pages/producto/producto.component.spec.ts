@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import * as productoData from '../../../../public/json/productoData.json';
 import { ProductoComponent } from './producto.component';
 
 describe('ProductoComponent', () => {

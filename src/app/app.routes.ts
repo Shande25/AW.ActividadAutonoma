@@ -4,6 +4,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { Error404Component } from './pages/error404/error404.component'; 
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { FooterComponent } from './pages/components/footer/footer.component';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'productos', component: ProductosComponent },
